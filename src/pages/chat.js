@@ -1,4 +1,6 @@
-function Chat({}){
+
+
+function Chat(){
     return (
         <div className="Chat">
 
