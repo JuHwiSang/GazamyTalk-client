@@ -1,6 +1,6 @@
-import ImgFriend from "../assets/images/profile.png";
 import styled from "styled-components";
 import AddFImg from "../assets/images/addFriend.png";
+import FriendComponent from "./friendComponent.js"
 
 const Nav = styled.nav`
   background-color: #7ae2f2;
@@ -13,36 +13,18 @@ const Nav = styled.nav`
   flex-direction: column;
   align-items: center;
 `;
-
-const Friend = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+const AddFriendImg = styled.img`
   position: relative;
-  top: 30px;
-  width: 230px;
-  height: 80px;
-  border-radius: 3px;
-  transition: 0.3s;
-  box-shadow: 0px 0px 20px 1px rgba(61, 61, 75, 0.2);
-  padding: 10px;
-
-  &:hover {
-    transition: 0.3s;
-    transform: translateX(10px);
-    box-shadow: 0px 10px 20px 10px rgba(24, 24, 31, 0.2);
-  }
+  left: 0;
+  width: 60px;
+  height: 72px;
+  padding: 3px;
 `;
 
-const FriendDetail = styled.div``;
-
-const FriendName = styled.div``;
-
-const FriendTxt = styled.div``;
-
-const FriendImg = styled.img`
-  width: 80px;
-  height: 80px;
+const AddFriendTxt = styled.div`
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
 `;
 
 const AddFriend = styled.div`
@@ -65,58 +47,12 @@ const AddFriend = styled.div`
   }
 `;
 
-const AddFriendImg = styled.img`
-  position: relative;
-  left: 0;
-  width: 60px;
-  height: 72px;
-  padding: 3px;
-`;
-
-const AddFriendTxt = styled.div`
-`;
-
-
 function friendNav(){
     return <Nav>
-    <Friend>
-      <FriendImg src={ImgFriend}></FriendImg>
-      <FriendDetail>
-        <FriendName>김땡떙</FriendName>
-        <FriendTxt>llrleaod asjhkzxv ewakbkjsdf sxiso</FriendTxt>
-      </FriendDetail>
-    </Friend>
-    <Friend>
-      <FriendImg src={ImgFriend}></FriendImg>
-      <FriendDetail>
-        <FriendName>김땡떙</FriendName>
-        <FriendTxt>llrleaod asjhkzxv ewakbkjsdf sxiso</FriendTxt>
-      </FriendDetail>
-    </Friend>
-    <Friend>
-      <FriendImg src={ImgFriend}></FriendImg>
-      <FriendDetail>
-        <FriendName>김땡떙</FriendName>
-        <FriendTxt>llrleaod asjhkzxv ewakbkjsdf sxiso</FriendTxt>
-      </FriendDetail>
-    </Friend>
-    <Friend>
-      <FriendImg src={ImgFriend}></FriendImg>
-      <FriendDetail>
-        <FriendName>김땡떙</FriendName>
-        <FriendTxt>llrleaod asjhkzxv ewakbkjsdf sxiso</FriendTxt>
-      </FriendDetail>
-    </Friend>
-    <Friend>
-      <FriendImg src={ImgFriend}></FriendImg>
-      <FriendDetail>
-        <FriendName>김땡떙</FriendName>
-        <FriendTxt>llrleaod asjhkzxv ewakbkjsdf sxiso</FriendTxt>
-      </FriendDetail>
-    </Friend>
+    <FriendComponent></FriendComponent>
     <AddFriend>
       <AddFriendImg src={AddFImg}></AddFriendImg>
-      <AddFriendTxt>Click here for more Friend</AddFriendTxt>
+      <AddFriendTxt><a href="./register">Click here for more Friend</a></AddFriendTxt>
     </AddFriend>
   </Nav>
 }
