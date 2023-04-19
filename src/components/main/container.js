@@ -1,8 +1,9 @@
 import styled from "styled-components";
-import Notification from "../assets/images/notification.png"
+import Notification from "../../assets/images/notification.png"
 import FriendComponent from "./friendComponent";
 
-const Container = styled.div``;
+const Container = styled.div`
+`;
 
 const Box = styled.div`
   position: absolute;

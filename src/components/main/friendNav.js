@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import AddFImg from "../assets/images/addFriend.png";
-import FriendComponent from "./friendComponent.js"
-
+import AddFImg from "../../assets/images/addFriend.png";
+import FriendComponent from "./friendComponent.js";
+import { Link } from "react-router-dom";
 const Nav = styled.nav`
   background-color: #7ae2f2;
   position: absolute;
@@ -22,7 +22,7 @@ const AddFriendImg = styled.img`
 `;
 
 const AddFriendTxt = styled.div`
-  color: black;
+  color: ivory;
   text-decoration: none;
   font-size: 20px;
 `;
@@ -47,15 +47,25 @@ const AddFriend = styled.div`
   }
 `;
 
-function friendNav(){
-    return <Nav>
-    <FriendComponent></FriendComponent>
-    <AddFriend>
-      <AddFriendImg src={AddFImg}></AddFriendImg>
-      <AddFriendTxt><a href="./register">Click here for more Friend</a></AddFriendTxt>
-    </AddFriend>
-  </Nav>
-}
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 900;
+`;
 
+function friendNav() {
+  return (
+    <Nav>
+      <FriendComponent></FriendComponent>
+
+      <StyledLink to="/register">
+        <AddFriend>
+          <AddFriendImg src={AddFImg}></AddFriendImg>
+          <AddFriendTxt>Click here to add Friend</AddFriendTxt>
+        </AddFriend>
+      </StyledLink>
+    </Nav>
+  );
+}
 
 export default friendNav;

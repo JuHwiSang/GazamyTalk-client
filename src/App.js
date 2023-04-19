@@ -1,4 +1,4 @@
-import { Route, Router, Routes, BrowserRouter } from "react-router-dom";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 
 import Main from "./pages/main.js"
 import Chat from "./pages/chat.js"

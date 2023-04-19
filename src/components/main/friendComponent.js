@@ -1,4 +1,4 @@
-import ImgFriend from "../assets/images/profile.png";
+import ImgFriend from "../../assets/images/profile.png";
 import styled from "styled-components";
 
 const Friend = styled.div`

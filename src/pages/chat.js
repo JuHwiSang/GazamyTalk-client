@@ -1,10 +1,10 @@
-
+import Background from "../components/background";
 
 function Chat(){
     return (
-        <div className="Chat">
-
-        </div>
+        <Background>
+            hello
+        </Background>
     )
 }
 
